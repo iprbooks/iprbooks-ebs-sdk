@@ -39,7 +39,11 @@ abstract class Model extends Response
         }
 
         $this->response = $this->getClient()->makeRequest($apiMethod, array());
-        $this->data = $this->response['data'];
+        if (array_key_exists('data', $this->response)) {
+            $this->data = $this->response['data'];
+        } else {
+            $this->data = array();
+        }
     }
 
 }
