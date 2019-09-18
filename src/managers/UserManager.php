@@ -1,8 +1,9 @@
 <?php
 
-namespace Iprbooks\Ebs\Sdk;
+namespace Iprbooks\Ebs\Sdk\Managers;
 
 use Exception;
+use Iprbooks\Ebs\Sdk\Client;
 use Iprbooks\Ebs\Sdk\Core\Response;
 use Iprbooks\Ebs\Sdk\Models\User;
 
