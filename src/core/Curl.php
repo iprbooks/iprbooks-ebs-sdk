@@ -21,7 +21,7 @@ class Curl
     {
 
         if (!empty($params)) {
-            $apiMethod = sprintf("%s?%s", $apiMethod, http_build_query($params));
+            $apiMethod = sprintf("%s?%s", $apiMethod, http_build_query($params, '', '&'));
         };
 
         $headers = array(
