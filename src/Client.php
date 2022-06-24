@@ -40,10 +40,10 @@ final class Client
         $json = array(
             "client_id" => $this->clientId,
             "time" => time(),
-            "ip" => $_SERVER['SERVER_ADDR']
+            "ip" => '0.0.0.0'
         );
 
-        $token = JWT::encode($json, $this->secretKey);
+        $token = JWT::encode($json, $this->secretKey, 'HS256');
         $params = array_merge(array("client_id" => $this->clientId), $params);
 
         $result = Curl::exec($apiMethod, $token, $params);
