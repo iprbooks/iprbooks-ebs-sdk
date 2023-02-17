@@ -24,7 +24,7 @@
     "ext-json": "*"
   },
   "require-dev": {
-    "firebase/php-jwt": "5.0.0"
+    "firebase/php-jwt": "6.0.0"
   },
   "config": {
     "secure-http": false,
